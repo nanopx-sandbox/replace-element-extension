@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Element Replacer",
+  "version": "0.0.1",
+  /*"default_locale": "en",*/
+  "description": "Replace elements inside a webpage",
+  "icons": {},
+  "author": "nanopx",
+  "background": {
+    "persistent": false,
+    "scripts": ["scripts/background.js"]
+  },
+  "browser_action": {
+    "default_icon": {},
+    "default_title": "Element Replacer",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": ["styles/content_styles.css"],
+      "js": ["scripts/content_scripts.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "https://*/*",
+    "http://*/*",
+    "storage"
+  ]
+}
