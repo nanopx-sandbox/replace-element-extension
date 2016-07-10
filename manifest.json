@@ -2,13 +2,12 @@
   "manifest_version": 2,
   "name": "Element Replacer",
   "version": "0.0.1",
-  /*"default_locale": "en",*/
   "description": "Replace elements inside a webpage",
   "icons": {},
   "author": "nanopx",
   "background": {
     "persistent": false,
-    "scripts": ["scripts/background.js"]
+    "scripts": ["build/background.bundle.js"]
   },
   "browser_action": {
     "default_icon": {},
@@ -21,8 +20,8 @@
         "http://*/*",
         "https://*/*"
       ],
-      "css": ["styles/content_styles.css"],
-      "js": ["scripts/content_scripts.js"]
+      "css": ["build/content_styles.css"],
+      "js": ["build/content_scripts.bundle.js"]
     }
   ],
   "permissions": [

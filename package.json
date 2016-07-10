@@ -1,0 +1,52 @@
+{
+  "name": "replace-element-extension",
+  "version": "0.0.1",
+  "description": "Chrome extension for replacing elements",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run script && npm run style",
+    "build-watch": "npm run script-watch & npm run style-watch",
+    "script": "webpack --verbose --colors --display-error-details --config webpack.config.load.js",
+    "script-watch": "npm run build -- --watch",
+    "style": "stylus styles/ -o build",
+    "style-watch": "npm run style -- -w -m",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanopx-sandbox/replace-element-extension.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "react",
+    "redux"
+  ],
+  "author": "nanopx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanopx-sandbox/replace-element-extension/issues"
+  },
+  "homepage": "https://github.com/nanopx-sandbox/replace-element-extension#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.9.1",
+    "babel-runtime": "^6.9.2",
+    "material-ui": "^0.15.2",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.5.2",
+    "redux-saga": "^0.11.0",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.9.0",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.1"
+  }
+}
