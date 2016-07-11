@@ -76,7 +76,7 @@ export const resolve = {
   //   react: path.join(__dirname, 'node_modules/react'),
   // },
   modulesDirectories: [
-    'src',
+    'scripts',
     'node_modules',
   ],
   extensions: ['', '.json', '.js', '.jsx'],
