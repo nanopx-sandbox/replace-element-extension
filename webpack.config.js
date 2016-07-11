@@ -18,12 +18,15 @@ export const devtool = false;
 
 export const entry = {
   background: [
+    'babel-polyfill',
     './scripts/background.js',
   ],
   content_scripts: [
+    'babel-polyfill',
     './scripts/content_scripts.js',
   ],
   popup: [
+    'babel-polyfill',
     './scripts/popup.js',
   ],
 };
