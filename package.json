@@ -7,7 +7,7 @@
     "build": "npm run script && npm run style",
     "build-watch": "npm run script-watch & npm run style-watch",
     "script": "webpack --verbose --colors --display-error-details --config webpack.config.load.js",
-    "script-watch": "npm run build -- --watch",
+    "script-watch": "npm run script -- --watch",
     "style": "stylus styles/ -o build",
     "style-watch": "npm run style -- -w -m",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -35,6 +35,7 @@
     "material-ui": "^0.15.2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-redux": "^4.4.5",
     "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.5.2",
     "redux-saga": "^0.11.0",

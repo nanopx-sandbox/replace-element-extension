@@ -24,7 +24,7 @@ function setSiteElementReplacement(site, selector, element) {
 chrome.runtime.onMessage.addListener((request, sender) => {
   if (request.type === 'initialize') {
     console.log(sender.tab.url);
-    getSites(function(items) {
+    getSites((items) => {
       chrome.tabs.sendMessage(sender.tab.id, items);
     });
   }

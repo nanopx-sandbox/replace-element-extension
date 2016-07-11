@@ -63,7 +63,7 @@ export const module = {
         cacheDirectory: true,
       },
       include: [
-        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'scripts'),
       ],
       exclude: /node_modules/,
     },
