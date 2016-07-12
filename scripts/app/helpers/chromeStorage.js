@@ -19,7 +19,7 @@ function reachValue(keys, value = {}) {
     reachedValue = reachedValue[key] || {};
   });
 
-  if (Object.keys(reachedValue).length == 0) {
+  if (Object.keys(reachedValue).length === 0) {
     return undefined;
   }
 
@@ -30,7 +30,7 @@ export function get(keys, type = 'sync') {
   const [ firstKey, ...otherKeys ] = splitToKeys(keys);
   return new Promise((resolve) => {
     return chrome.storage[type].get(firstKey, (result) => {
-      if (otherKeys.length) {
+      if (!otherKeys.length) {
         return resolve(result);
       }
       return resolve(reachValue(otherKeys, result));

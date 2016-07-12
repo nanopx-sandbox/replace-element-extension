@@ -5,6 +5,8 @@ import rootReducer from './reducers';
 import rootSaga from './sagas';
 import { INITIALIZE } from './actionTypes';
 
+import * as chromeStorage from './helpers/chromeStorage';
+
 const sagaMiddleware = createSagaMiddleware();
 
 const initialState = {};

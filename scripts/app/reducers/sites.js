@@ -17,7 +17,7 @@ export const reducer = {
   [INITIALIZE]: (state, action) => {
     const newState = action.payload ? action.payload.sites : initialState;
     newState.sites.forEach((site) => {
-      if (!newState.replaceEntries[site] && !newState.replaceEntries[site].length) {
+      if (!newState.replaceEntries[site] && !newState.replaceEntries[site]) {
         // ensure there's an empty array initialized
         newState.replaceEntries[site] = [];
       }

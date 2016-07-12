@@ -17,7 +17,6 @@ export function *watchForInitAndLoadState() {
   let isLoadedState = false;
   while (!isLoadedState) {
     yield take(INITIALIZE);
-    console.log('Loading initial state...');
     yield loadState();
     isLoadedState = true;
   }
